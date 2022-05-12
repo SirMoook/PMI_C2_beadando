@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<patterns>
+    <pattern>
+        <name>pony</name>
+        <yarnColor>pink</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>1949.6951312378364</yarnPrice>
+        <patternPrice>8965.247940779533</patternPrice>
+    </pattern>
+    <pattern>
+        <name>flower</name>
+        <yarnColor>white</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>2435.8273708001525</yarnPrice>
+        <patternPrice>7318.624374013756</patternPrice>
+    </pattern>
+    <pattern>
+        <name>heart</name>
+        <yarnColor>red</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>1904.1115694774362</yarnPrice>
+        <patternPrice>8490.76350652871</patternPrice>
+    </pattern>
+    <pattern>
+        <name>orange</name>
+        <yarnColor>orange</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>1986.1806408476068</yarnPrice>
+        <patternPrice>9599.898227085934</patternPrice>
+    </pattern>
+</patterns>
