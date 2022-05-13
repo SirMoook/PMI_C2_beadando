@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <orders>
+    <order>
+        <name>pony</name>
+        <yarnColor>pink</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>2084.3670623280204</yarnPrice>
+        <patternPrice>6607.713871849174</patternPrice>
+    </order>
+    <order>
+        <name>pony</name>
+        <yarnColor>pink</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>2084.3670623280204</yarnPrice>
+        <patternPrice>6607.713871849174</patternPrice>
+    </order>
+    <order>
+        <name>Gratis</name>
+        <yarnColor>red</yarnColor>
+        <yarnWeight>Standard</yarnWeight>
+        <yarnPrice>0.0</yarnPrice>
+        <patternPrice>0.0</patternPrice>
+    </order>
     <total>
-        <total>0.0</total>
+        <total>13215.427743698348</total>
     </total>
 </orders>

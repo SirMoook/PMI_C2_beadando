@@ -4,6 +4,62 @@
         <name>pony</name>
         <yarnColor>pink</yarnColor>
         <yarnWeight>Light</yarnWeight>
+        <yarnPrice>2227.8199397235094</yarnPrice>
+        <patternPrice>7100.925665089571</patternPrice>
+    </pattern>
+    <pattern>
+        <name>flower</name>
+        <yarnColor>white</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>2159.098776158273</yarnPrice>
+        <patternPrice>7155.29525321713</patternPrice>
+    </pattern>
+    <pattern>
+        <name>heart</name>
+        <yarnColor>red</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>1858.4764665531907</yarnPrice>
+        <patternPrice>8578.44942643681</patternPrice>
+    </pattern>
+    <pattern>
+        <name>orange</name>
+        <yarnColor>orange</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>2206.4746123518385</yarnPrice>
+        <patternPrice>10401.065669091528</patternPrice>
+    </pattern>
+    <pattern>
+        <name>pony</name>
+        <yarnColor>pink</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>2084.3670623280204</yarnPrice>
+        <patternPrice>6607.713871849174</patternPrice>
+    </pattern>
+    <pattern>
+        <name>flower</name>
+        <yarnColor>white</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>1987.2858623664392</yarnPrice>
+        <patternPrice>9818.670190922614</patternPrice>
+    </pattern>
+    <pattern>
+        <name>heart</name>
+        <yarnColor>red</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>2357.845339242108</yarnPrice>
+        <patternPrice>8259.764203754909</patternPrice>
+    </pattern>
+    <pattern>
+        <name>orange</name>
+        <yarnColor>orange</yarnColor>
+        <yarnWeight>Light</yarnWeight>
+        <yarnPrice>2281.8267331438497</yarnPrice>
+        <patternPrice>7667.827048711615</patternPrice>
+    </pattern>
+    <pattern>
+        <name>pony</name>
+        <yarnColor>pink</yarnColor>
+        <yarnWeight>Light</yarnWeight>
         <yarnPrice>1949.6951312378364</yarnPrice>
         <patternPrice>8965.247940779533</patternPrice>
     </pattern>

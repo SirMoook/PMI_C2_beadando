@@ -21,9 +21,12 @@ public abstract class Assignment {
 
     private static ArrayList<Pattern> patterns=new ArrayList<>();
     private static ArrayList<Yarns> yarns=new ArrayList<>();
-    private static Scanner scanner=new Scanner(System.in);
     private static ArrayList<Pattern> purchase=new ArrayList<>();
+    private static ArrayList<Pattern> usedPattern=new ArrayList<>();
+    private static ArrayList<Yarns> usedYarns=new ArrayList<>();
+    private static Scanner scanner=new Scanner(System.in);
     private static Double subtotal=0.0;
+    private static Double purchaseTotal=0.0;
     private static Random rnd=new Random();
     private static Boolean end=Boolean.FALSE;
 
@@ -31,8 +34,9 @@ public abstract class Assignment {
 
 //  <menu>
         settingBaseYarns();
-        PatternsFromXml("src/main/resources/patterns.xml");
-        YarnsFromXml("src/main/resources/Yarns.xml");
+        patternsFromXml("src/main/resources/patterns.xml");
+        yarnsFromXml("src/main/resources/Yarns.xml");
+        orderFromXml("src/main/resources/order.xml");
 
 
             menu();
@@ -53,8 +57,8 @@ public abstract class Assignment {
                         "\n2 - Add a new pattern" +
                         "\n3 - Add a new yarn" +
                         "\n4 - Delete a pattern" +
-                        "\n5 - Listing stored things" +
-                        "\n6 - Registering a purchase" +
+                        "\n5 - List things stored in the program" +
+                        "\n6 - Register a purchase" +
                         "\n7 - Close program"
                 );
                 choise = numberIn();
@@ -100,10 +104,11 @@ public abstract class Assignment {
 
     private static void availableLists(){
         System.out.println(
-                "List out patterns - 1" +
+                "\nList out patterns - 1" +
                 "\nList out yarns - 2" +
-                "\nShow ordered items and subtotal - 3" +
-                "\nreturn to menu - 4"
+                "\nShow registered sold items and subtotal - 3" +
+                "\nShow preveously registered items and their total-4" +
+                "\nreturn to menu - 5"
         );
         int choice=numberIn();
         switch (choice){
@@ -120,6 +125,10 @@ public abstract class Assignment {
                 break;
             }
             case 4->{
+                readRceiptShow();
+                break;
+            }
+            case 5->{
                 menu();
             }
             default->{}
@@ -159,7 +168,7 @@ public abstract class Assignment {
 
         private static void receiptShow(){
             if(patterns.size()>0) {
-                System.out.println("The available patterns: ");
+                System.out.println("Patterns bought: ");
                 for (Pattern pattern : purchase) {
                     System.out.println("pattern name: " + pattern.getName() +
                             "\t color of the yarn used: " + pattern.getYarn().getColour().toString() +
@@ -171,8 +180,25 @@ public abstract class Assignment {
                 System.out.println("There are no patterns available. Try adding one.");
                 menu();
             }
-            System.out.println("Your subtotal is: "+subtotal);
+            System.out.println("The subtotal is: "+subtotal);
         }
+
+        private static void readRceiptShow(){
+        if(patterns.size()>0) {
+            System.out.println("The bought patterns: ");
+            for (Pattern pattern : usedPattern) {
+                System.out.println("pattern name: " + pattern.getName() +
+                        "\t color of the yarn used: " + pattern.getYarn().getColour().toString() +
+                        "\t weight of the yarn used: " + pattern.getYarn().getWeight().toString() +
+                        "\t pattern's price: " + pattern.getPrice());
+            }
+        }
+        else {
+            System.out.println("There are no patterns available. Try adding one.");
+            menu();
+        }
+        System.out.println("The total was: "+purchaseTotal);
+    }
 
     private static void purchaseDone(){
         System.out.println("Name the pattern that was purchased : ");
@@ -448,8 +474,7 @@ public abstract class Assignment {
     }
 
 
-    private static ArrayList<Yarns> YarnsFromXml(String filepath) {
-        ArrayList<Yarns> yarn = new ArrayList<>();
+    private static void yarnsFromXml(String filepath) {
         try {
             DocumentBuilderFactory documentBuilderFactory
                     = DocumentBuilderFactory.newInstance();
@@ -476,18 +501,15 @@ public abstract class Assignment {
                             }
                         }
                     }
-                    yarn.add(new Yarns(Colors.valueOf(color),weightEnum.valueOf(weight),Double.valueOf(price)));
+                    yarns.add(new Yarns(Colors.valueOf(color),weightEnum.valueOf(weight),Double.valueOf(price)));
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return yarn;
     }
 
-    private static void PatternsFromXml(String filepath) {
-        ArrayList<Yarns> yarn = new ArrayList<>();
-        ArrayList<Pattern> pattern = new ArrayList<>();
+    private static void patternsFromXml(String filepath) {
         try {
             DocumentBuilderFactory documentBuilderFactory
                     = DocumentBuilderFactory.newInstance();
@@ -502,22 +524,62 @@ public abstract class Assignment {
                 node = childNodeList.item(i);
 
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
-                    NodeList childNodesOfYarnsTag = node.getChildNodes();
+                    NodeList childNodesOfPatternsTag = node.getChildNodes();
                     String name="",color = "", weight = "", price = "",patternPrice="";
-                    for (int j = 0; j < childNodesOfYarnsTag.getLength(); j++) {
-                        Node childNodeOfYarnTag = childNodesOfYarnsTag.item(j);
-                        if (childNodeOfYarnTag.getNodeType() == Node.ELEMENT_NODE) {
-                            switch (childNodeOfYarnTag.getNodeName()) {
-                                case "name" -> name = childNodeOfYarnTag.getTextContent();
-                                case "yarnColor" -> color = childNodeOfYarnTag.getTextContent();
-                                case "yarnWeight" -> weight = childNodeOfYarnTag.getTextContent();
-                                case "yarnPrice" -> price = childNodeOfYarnTag.getTextContent();
-                                case "patternPrice" -> patternPrice=childNodeOfYarnTag.getTextContent();
+                    for (int j = 0; j < childNodesOfPatternsTag.getLength(); j++) {
+                        Node childNodeOfPatternsTag = childNodesOfPatternsTag.item(j);
+                        if (childNodeOfPatternsTag.getNodeType() == Node.ELEMENT_NODE) {
+                            switch (childNodeOfPatternsTag.getNodeName()) {
+                                case "name" -> name = childNodeOfPatternsTag.getTextContent();
+                                case "yarnColor" -> color = childNodeOfPatternsTag.getTextContent();
+                                case "yarnWeight" -> weight = childNodeOfPatternsTag.getTextContent();
+                                case "yarnPrice" -> price = childNodeOfPatternsTag.getTextContent();
+                                case "patternPrice" -> patternPrice=childNodeOfPatternsTag.getTextContent();
                             }
                         }
                     }
                     yarns.add(new Yarns(Colors.valueOf(color),weightEnum.valueOf(weight),Double.valueOf(price)));
-                    pattern.add(new Pattern(name,yarns.get(yarns.size()-1),Double.valueOf(patternPrice)));
+                    patterns.add(new Pattern(name,yarns.get(yarns.size()-1),Double.valueOf(patternPrice)));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void orderFromXml(String filepath) {
+        try {
+            DocumentBuilderFactory documentBuilderFactory
+                    = DocumentBuilderFactory.newInstance();
+            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+            Document document = documentBuilder.parse(filepath);
+
+            Element rootElement = document.getDocumentElement();
+
+            NodeList childNodeList = rootElement.getChildNodes();
+            Node node;
+            for (int i = 0; i < childNodeList.getLength(); i++) {
+                node = childNodeList.item(i);
+
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    NodeList childNodesOfOrderTag = node.getChildNodes();
+                    String name="Gratis",color = "red", weight = "Standard", price = "0",patternPrice="0",total="0";
+                    for (int j = 0; j < childNodesOfOrderTag.getLength(); j++) {
+                        Node childNodeOfOrderTag = childNodesOfOrderTag.item(j);
+                        if (childNodeOfOrderTag.getNodeType() == Node.ELEMENT_NODE) {
+                            switch (childNodeOfOrderTag.getNodeName()) {
+                                case "name" -> name = childNodeOfOrderTag.getTextContent();
+                                case "yarnColor" -> color = childNodeOfOrderTag.getTextContent();
+                                case "yarnWeight" -> weight = childNodeOfOrderTag.getTextContent();
+                                case "yarnPrice" -> price = childNodeOfOrderTag.getTextContent();
+                                case "patternPrice" -> patternPrice=childNodeOfOrderTag.getTextContent();
+                                case "total" -> total=childNodeOfOrderTag.getTextContent();
+                            }
+                        }
+                    }
+                    usedYarns.add(new Yarns(Colors.valueOf(color),weightEnum.valueOf(weight),Double.valueOf(price)));
+                    usedPattern.add(new Pattern(name,usedYarns.get(usedYarns.size()-1),Double.valueOf(patternPrice)));
+                    purchaseTotal+=Double.valueOf(total);
                 }
             }
         } catch (Exception e) {
@@ -562,6 +624,10 @@ public abstract class Assignment {
     }
 
     public static void saveOrder(String filepath) {
+        for(Pattern pattern:usedPattern){
+            purchase.add(pattern);
+        }
+        subtotal+=purchaseTotal;
         try {
             Document document = DocumentBuilderFactory.newInstance()
                     .newDocumentBuilder().newDocument();
@@ -580,7 +646,7 @@ public abstract class Assignment {
                 createChildElement(document, patternElement, "yarnPrice",
                         String.valueOf(pattern.getYarn().getPrice().toString()));
                 createChildElement(document, patternElement, "patternPrice",
-                        String.valueOf(pattern.getPrice()));
+                        String.valueOf(pattern.getPrice().toString()));
             }
 
             Element patternElement = document.createElement("total");

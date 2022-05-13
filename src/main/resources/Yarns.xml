@@ -3,27 +3,72 @@
     <yarn>
         <Color>black</Color>
         <Weight>Light</Weight>
-        <Price>1979.4246918630383</Price>
+        <Price>2134.767277848149</Price>
     </yarn>
     <yarn>
         <Color>white</Color>
         <Weight>Light</Weight>
-        <Price>2435.8273708001525</Price>
+        <Price>2159.098776158273</Price>
     </yarn>
     <yarn>
         <Color>gray</Color>
         <Weight>Light</Weight>
-        <Price>2330.376921246524</Price>
+        <Price>2047.8471353854284</Price>
     </yarn>
     <yarn>
         <Color>red</Color>
         <Weight>Light</Weight>
-        <Price>1904.1115694774362</Price>
+        <Price>1858.4764665531907</Price>
     </yarn>
     <yarn>
         <Color>blue</Color>
         <Weight>Light</Weight>
-        <Price>2323.9841448983966</Price>
+        <Price>1819.2962194879215</Price>
+    </yarn>
+    <yarn>
+        <Color>pink</Color>
+        <Weight>Light</Weight>
+        <Price>2227.8199397235094</Price>
+    </yarn>
+    <yarn>
+        <Color>yellow</Color>
+        <Weight>Light</Weight>
+        <Price>2071.604496883193</Price>
+    </yarn>
+    <yarn>
+        <Color>cyan</Color>
+        <Weight>Light</Weight>
+        <Price>1801.5893104061977</Price>
+    </yarn>
+    <yarn>
+        <Color>orange</Color>
+        <Weight>Light</Weight>
+        <Price>2206.4746123518385</Price>
+    </yarn>
+    <yarn>
+        <Color>green</Color>
+        <Weight>Light</Weight>
+        <Price>2466.4225775010577</Price>
+    </yarn>
+    <yarn>
+        <Color>pink</Color>
+        <Weight>Light</Weight>
+        <Price>2084.3670623280204</Price>
+    </yarn>
+    <yarn>
+        <Color>white</Color>
+        <Weight>Light</Weight>
+        <Price>1987.2858623664392</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Light</Weight>
+        <Price>2357.845339242108</Price>
+    </yarn>
+    <yarn>
+        <Color>orange</Color>
+        <Weight>Light</Weight>
+        <Price>2281.8267331438497</Price>
     </yarn>
     <yarn>
         <Color>pink</Color>
@@ -31,14 +76,14 @@
         <Price>1949.6951312378364</Price>
     </yarn>
     <yarn>
-        <Color>yellow</Color>
+        <Color>white</Color>
         <Weight>Light</Weight>
-        <Price>2261.6222654160047</Price>
+        <Price>2435.8273708001525</Price>
     </yarn>
     <yarn>
-        <Color>cyan</Color>
+        <Color>red</Color>
         <Weight>Light</Weight>
-        <Price>2508.5008779889204</Price>
+        <Price>1904.1115694774362</Price>
     </yarn>
     <yarn>
         <Color>orange</Color>
@@ -46,28 +91,148 @@
         <Price>1986.1806408476068</Price>
     </yarn>
     <yarn>
-        <Color>green</Color>
-        <Weight>Light</Weight>
-        <Price>2301.6586217233985</Price>
-    </yarn>
-    <yarn>
-        <Color>pink</Color>
-        <Weight>Light</Weight>
-        <Price>2575.2481612471347</Price>
-    </yarn>
-    <yarn>
-        <Color>white</Color>
-        <Weight>Light</Weight>
-        <Price>2312.681588184212</Price>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
     </yarn>
     <yarn>
         <Color>red</Color>
-        <Weight>Light</Weight>
-        <Price>2237.6063310197583</Price>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
     </yarn>
     <yarn>
-        <Color>orange</Color>
-        <Weight>Light</Weight>
-        <Price>2104.633713770684</Price>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
+    </yarn>
+    <yarn>
+        <Color>red</Color>
+        <Weight>Standard</Weight>
+        <Price>0.0</Price>
     </yarn>
 </yarns>
