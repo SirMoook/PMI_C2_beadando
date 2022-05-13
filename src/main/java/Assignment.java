@@ -33,7 +33,7 @@ public abstract class Assignment {
     public static void main(String[] args) {
 
 //  <menu>
-        settingBaseYarns();
+        //settingBaseYarns();
         patternsFromXml("src/main/resources/patterns.xml");
         yarnsFromXml("src/main/resources/Yarns.xml");
         orderFromXml("src/main/resources/order.xml");
