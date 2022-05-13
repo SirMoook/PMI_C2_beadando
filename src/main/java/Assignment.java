@@ -31,8 +31,8 @@ public abstract class Assignment {
 
 //  <menu>
         settingBaseYarns();
-        readPatternsFromXml("src/main/resources/patterns.xml");
-        readYarnsFromXml("src/main/resources/Yarns.xml");
+        PatternsFromXml("src/main/resources/patterns.xml");
+        YarnsFromXml("src/main/resources/Yarns.xml");
 
 
             menu();
@@ -86,9 +86,9 @@ public abstract class Assignment {
                     }
                     case 7 -> {
 
-                        savePatternToXml("src/main/resources/patterns.xml");
-                        saveYarnToXml("src/main/resources/Yarns.xml");
-                        saveOrderToXml("src/main/resources/order.xml");
+                        savePattern("src/main/resources/patterns.xml");
+                        saveYarn("src/main/resources/Yarns.xml");
+                        saveOrder("src/main/resources/order.xml");
                         end = Boolean.TRUE;
                     }
                     default -> System.out.println("You couldn't even select the right option.\nMaybe next time...");
@@ -449,7 +449,7 @@ public abstract class Assignment {
     }
 
 
-    private static ArrayList<Yarns> readYarnsFromXml(String filepath) {
+    private static ArrayList<Yarns> YarnsFromXml(String filepath) {
         ArrayList<Yarns> yarn = new ArrayList<>();
         try {
             DocumentBuilderFactory documentBuilderFactory
@@ -486,7 +486,7 @@ public abstract class Assignment {
         return yarn;
     }
 
-    private static void readPatternsFromXml(String filepath) {
+    private static void PatternsFromXml(String filepath) {
         ArrayList<Yarns> yarn = new ArrayList<>();
         ArrayList<Pattern> pattern = new ArrayList<>();
         try {
@@ -526,7 +526,7 @@ public abstract class Assignment {
         }
     }
 
-    public static void savePatternToXml( String filepath) {
+    public static void savePattern(String filepath) {
         try {
             Document document = DocumentBuilderFactory.newInstance()
                     .newDocumentBuilder().newDocument();
@@ -562,7 +562,7 @@ public abstract class Assignment {
         }
     }
 
-    public static void saveOrderToXml( String filepath) {
+    public static void saveOrder(String filepath) {
         try {
             Document document = DocumentBuilderFactory.newInstance()
                     .newDocumentBuilder().newDocument();
@@ -603,7 +603,7 @@ public abstract class Assignment {
         }
     }
 
-    public static void saveYarnToXml( String filepath) {
+    public static void saveYarn(String filepath) {
         try {
             Document document = DocumentBuilderFactory.newInstance()
                     .newDocumentBuilder().newDocument();
