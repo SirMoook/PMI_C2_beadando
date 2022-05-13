@@ -98,6 +98,7 @@ public abstract class Assignment {
     }
 
 
+
     private static void availableLists(){
         System.out.println(
                 "List out patterns - 1" +
@@ -205,6 +206,16 @@ public abstract class Assignment {
 
         }
 
+    }
+
+    private static void addYarn(){
+        System.out.println("What color do you want to add? : ");
+        Colors color=colorIn();
+        System.out.println("What wheight does it have? (Heavy , Standard, Light , Baby) : ");
+        weightEnum weight=weightIn();
+        System.out.println("What's its price? : ");
+        Double price= numberIn().doubleValue();
+        yarns.add(new Yarns(color,weight,price));
     }
 
     private static void deletePattern(){
@@ -320,17 +331,6 @@ public abstract class Assignment {
                 System.out.println("There are no patterns available.");
                 menu();
         }
-    }
-
-
-    private static void addYarn(){
-        System.out.println("What color do you want to add? : ");
-        Colors color=colorIn();
-        System.out.println("What wheight does it have? (Heavy , Standard, Light , Baby) : ");
-        weightEnum weight=weightIn();
-        System.out.println("What's its price? : ");
-        Double price= numberIn().doubleValue();
-        yarns.add(new Yarns(color,weight,price));
     }
 
 
