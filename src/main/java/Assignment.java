@@ -43,7 +43,6 @@ public abstract class Assignment {
 
 
 
-
     private static void menu(){
         while(!end) {
             System.out.print("What do you want to do?");
